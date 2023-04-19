@@ -1,0 +1,616 @@
+set context person creator;
+tcl;
+mql start transaction;
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0013.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0201&&.002.HG.0013.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0202&&.002.HG.0013.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&0203&&.002.HG.0013.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0013.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020112.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020112.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020112.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020112.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020112.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020112.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020112.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020112.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020112.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020112.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020203.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020203.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020203.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020203.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020203.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020203.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020203.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020203.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020203.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020203.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020202.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020202.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020202.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020202.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020202.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020202.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020202.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020202.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020202.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020202.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020204.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020204.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020204.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020204.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020204.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020204.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020204.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020204.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020204.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020204.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020201.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020201.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020201.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020201.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020201.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020201.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020201.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020201.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020201.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020201.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020305.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020305.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020305.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020305.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020305.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020305.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020305.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020305.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020305.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020305.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020113.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020113.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020113.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020113.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020113.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020113.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020113.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020113.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020113.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020113.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&01&&&&.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020107.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020107.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020107.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020107.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020107.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020107.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020107.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020107.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020107.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020107.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020106.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020106.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020106.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020106.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020106.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020106.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020106.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020106.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020106.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020106.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020103.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020103.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020103.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020103.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020103.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020103.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020103.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020103.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020103.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020103.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020111.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020111.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020111.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020111.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020111.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020111.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020111.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020111.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020111.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020111.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020104.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020104.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020104.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020104.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020104.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020104.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020104.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020104.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020104.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020104.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020105.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020105.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020105.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020105.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020105.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020105.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020105.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020105.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020105.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020105.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020108.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020108.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020108.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020108.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020108.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020108.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020108.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020108.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020108.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020108.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020102.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020102.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020102.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020102.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020102.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020102.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020102.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020102.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020102.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020102.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020109.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020109.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020109.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020109.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020109.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020109.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020109.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020109.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020109.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020109.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020101.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020101.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020101.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020101.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020101.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020101.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020101.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020101.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020101.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020101.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020110.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020110.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020110.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020110.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020110.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020110.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020110.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020110.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020110.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020110.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&03&&&&.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&04&&&&.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020306.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020306.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020306.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020306.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020306.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020306.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020306.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020306.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020306.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020306.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020302.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020302.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020302.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020302.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020302.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020302.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020302.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020302.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020302.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020302.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020303.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020303.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020303.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020303.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020303.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020303.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020303.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020303.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020303.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020303.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020206.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020206.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020206.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020206.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020206.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020206.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020206.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020206.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020206.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020206.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020307.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020307.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020307.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020307.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020307.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020307.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020307.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020307.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020307.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020307.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020301.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020301.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020301.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020301.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020301.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020301.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020301.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020301.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020301.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020301.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020304.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020304.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020304.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020304.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020304.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020304.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020304.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020304.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020304.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020304.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020205.002.HG.0011.E' && project =='JSC EC ASE CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020205.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020205.002.HG.0011.E_1-epc' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020205.002.HG.0011.E_1-epc_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020205.002.HG.0011.E_1-epc' 0 rel IMS_Revision from $DocSetID
+
+############
+set DocSetRev1 [mql temp query bus IMS_DocumentSetRevision * * where "policy != 'Version' && to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020205.002.HG.0011.E' && project =='Nuclear Power Plant Authority CS'" select id dump tcl];
+set DocSet [mql temp query bus IMS_DocumentSetRevision * * where to\[IMS_Revision\].from.attribute\[IMS_Code\]=='ED.D.P003.&.&&&&&&020205.002.HG.0011.E' select to\[IMS_Revision\].from.id dump tcl];
+set DocSetID [lindex $DocSet 0 3 0];
+set id [lindex $DocSetRev1 0 3 0];
+mql revise bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020205.002.HG.0011.E_1-own' 0 bus $id;
+mql mod bus $id name 'ED.D.P003.&.&&&&&&020205.002.HG.0011.E_1-own_1' revision 1;
+mql connect bus IMS_DocumentSetRevision 'ED.D.P003.&.&&&&&&020205.002.HG.0011.E_1-own' 0 rel IMS_Revision from $DocSetID
+
+############
+mql commit transaction;
